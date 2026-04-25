@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENSIOBMAX.IO - V39.2.4 LUXURY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; background: #020617; color: white; font-family: sans-serif; overflow-x: hidden; }
+        @keyframes sweep { 0% { left: -100%; } 50% { left: 100%; } 100% { left: 100%; } }
+        .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1); position: relative; z-index: 2; overflow: hidden; }
+        .glow-effect::before { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent); transform: skewX(-25deg); animation: sweep 5s ease-in-out infinite; }
+        .border-blue { border-left: 5px solid #3b82f6; }
+        .border-yellow { border-left: 5px solid #eab308; }
+        .border-red { border-left: 5px solid #ef4444; }
+        .border-green { border-left: 5px solid #22c55e; }
+        #menu-wrapper { position: fixed; inset: 0; z-index: 5000; visibility: hidden; opacity: 0; transition: 0.3s; }
+        #menu-wrapper.active { visibility: visible; opacity: 1; }
+        .menu-content { position: absolute; left: 0; width: 85%; height: 100%; background: #070b19; transform: translateX(-100%); transition: 0.4s; border-right: 2px solid #3b82f6; padding: 40px 20px; z-index: 5001; }
+        #menu-wrapper.active .menu-content { transform: translateX(0); }
+        .popup { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: flex; align-items: center; justify-content: center; z-index: 6000; visibility: hidden; opacity: 0; transition: 0.3s; padding: 20px; }
+        .popup.active { visibility: visible; opacity: 1; }
+    </style>
+</head>
+<body>
+    <header class="p-4 flex items-center justify-between sticky top-0 bg-[#020617]/95 z-50 border-b border-white/10">
+        <button onclick="toggleMenu()" class="text-2xl p-2 text-blue-400">☰</button>
+        <h1 class="text-lg font-black italic text-blue-400 uppercase">SENSIOBMAX.IO</h1>
+        <div onclick="openBankPopup()" class="bg-blue-600 px-4 py-1.5 rounded-full text-[11px] font-black cursor-pointer uppercase shadow-lg shadow-blue-500/30">NẠP TIỀN +</div>
+    </header>
+
+    <div class="mx-3 mt-4 space-y-2">
+        <div class="glass border-blue p-2 bg-blue-900/20 text-center text-[9px] font-black text-blue-400 uppercase italic">HỆ THỐNG: V39.2.4 (FIX QR & FULL FILE)</div>
+        <div class="glass border-yellow p-3">
+            <marquee class="text-[11px] font-bold italic text-yellow-400 uppercase">GIỜ HOẠT ĐỘNG: 6H-12H | 14H-22H --- LIÊN HỆ ZALO: 0397208110</marquee>
+        </div>
+    </div>
+
+    <main class="p-6 space-y-8 max-w-md mx-auto relative z-10">
+        <section class="space-y-3">
+            <h2 class="text-center text-[10px] font-black italic text-red-500 uppercase">--- FAKE LAG FREE 48H ---</h2>
+            <div class="glass border-red p-4 glow-effect flex justify-between items-center"><h4 class="font-bold italic text-[11px] uppercase">NetPlus V8</h4><button class="bg-red-600 px-4 py-2 rounded-lg font-black text-[9px] uppercase">Lấy Key</button></div>
+            <div class="glass border-red p-4 glow-effect flex justify-between items-center"><h4 class="font-bold italic text-[11px] uppercase text-red-300">Hopper V10</h4><button class="bg-red-600 px-4 py-2 rounded-lg font-black text-[9px] uppercase">Lấy Key</button></div>
+            <div class="glass border-red p-4 glow-effect flex justify-between items-center"><h4 class="font-bold italic text-[11px] uppercase">Itachi Ping V10</h4><button class="bg-red-600 px-4 py-2 rounded-lg font-black text-[9px] uppercase">Lấy Key</button></div>
+        </section>
+
+        <section class="space-y-3 pb-10">
+            <h2 class="text-center text-[10px] font-black italic text-blue-500 uppercase">--- DANH SÁCH FILE VIP ---</h2>
+            
+            <div class="glass border-blue p-4 glow-effect flex justify-between items-center">
+                <div><h4 class="font-bold italic text-xs uppercase text-blue-300">Aimlock iOS 2.5 (200k)</h4><p class="text-[8px] text-gray-500 font-bold">Đã bán: 84 | Còn: 3</p></div>
+                <button onclick="openBankPopup()" class="bg-blue-600 px-4 py-2 rounded-lg font-black text-[9px] uppercase">Mua</button>
+            </div>
+
+            <div class="glass border-yellow p-4 glow-effect flex justify-between items-center">
+                <div><h4 class="font-bold italic text-xs text-yellow-400 uppercase">Aimbody iOS 3.0 (250k)</h4><p class="text-[8px] text-gray-500 font-bold">Đã bán: 67 | Còn: 6</p></div>
+                <button onclick="openBankPopup()" class="bg-yellow-500 px-4 py-2 rounded-lg font-black text-[9px] uppercase text-black">Mua</button>
+            </div>
+
+            <div class="glass border-blue p-4 glow-effect flex justify-between items-center">
+                <div><h4 class="font-bold italic text-xs uppercase text-blue-400">Aimlock 2.0 (100k)</h4><p class="text-[8px] text-gray-500 font-bold">Đã bán: 92 | Còn: 2</p></div>
+                <button onclick="openBankPopup()" class="bg-blue-500 px-4 py-2 rounded-lg font-black text-[9px] uppercase">Mua</button>
+            </div>
+
+            <div class="glass border-yellow p-4 glow-effect flex justify-between items-center">
+                <div><h4 class="font-bold italic text-xs text-yellow-300 uppercase">Proxy's iOS (150k)</h4><p class="text-[8px] text-gray-500 font-bold">Đã bán: 45 | Còn: 8</p></div>
+                <button onclick="openBankPopup()" class="bg-yellow-600 px-4 py-2 rounded-lg font-black text-[9px] uppercase">Mua</button>
+            </div>
+
+            <div class="glass border-green p-5 glow-effect">
+                <h4 class="font-bold italic text-xs text-green-400 uppercase text-center mb-1">Fluorite iOS</h4>
+                <p class="text-[8px] text-gray-500 font-bold text-center mb-3">Đã bán: 59 | Còn: 4</p>
+                <div class="flex gap-2">
+                    <button onclick="openBankPopup()" class="flex-1 bg-green-600/20 border border-green-500 py-2 rounded-lg font-black text-[8px] uppercase">100k/Tuần</button>
+                    <button onclick="openBankPopup()" class="flex-1 bg-green-600 py-2 rounded-lg font-black text-[8px] uppercase">350k/Tháng</button>
+                </div>
+            </div>
+
+            <div class="glass border-red p-5 glow-effect">
+                <h4 class="font-bold italic text-xs text-red-400 uppercase text-center mb-1">Fluorite Android (ADR)</h4>
+                <p class="text-[8px] text-gray-500 font-bold text-center mb-3">Đã bán: 71 | Còn: 7</p>
+                <div class="flex gap-2">
+                    <button onclick="openBankPopup()" class="flex-1 bg-red-600/20 border border-red-500 py-2 rounded-lg font-black text-[8px] uppercase">100k/Tuần</button>
+                    <button onclick="openBankPopup()" class="flex-1 bg-red-600 py-2 rounded-lg font-black text-[8px] uppercase">300k/Tháng</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="menu-wrapper" onclick="toggleMenu()">
+        <div class="menu-content" onclick="event.stopPropagation()">
+            <h2 class="text-blue-500 font-black italic text-xl mb-8 uppercase border-b border-blue-500/20 pb-2">DANH MỤC</h2>
+            <nav class="flex flex-col space-y-6">
+                <a href="#" class="font-bold italic text-white uppercase text-sm">🏠 TRANG CHỦ</a>
+                <div class="space-y-4 pt-4 border-t border-white/5">
+                    <button onclick="openBankPopup(); toggleMenu();" class="w-full text-left font-bold italic text-blue-400 uppercase text-sm">🏦 NẠP NGÂN HÀNG/MOMO</button>
+                    <a href="#" class="block font-bold italic text-white uppercase text-sm">📊 DÒNG TIỀN HỆ THỐNG</a>
+                    <a href="https://zalo.me/0397208110" target="_blank" class="block font-bold italic text-yellow-400 uppercase text-sm">📢 GROUP THÔNG BÁO</a>
+                    <a href="#" class="block font-bold italic text-green-400 uppercase text-sm">🤝 TIẾP THỊ LIÊN KẾT</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="bank-popup" class="popup">
+        <div class="glass border-blue p-6 w-full max-w-sm text-center">
+            <button onclick="closePopups()" class="absolute top-4 right-4 text-2xl text-gray-500">&times;</button>
+            <h2 class="font-black text-blue-400 mb-4 uppercase text-sm italic">THANH TOÁN</h2>
+            <div class="bg-white p-2 rounded-lg inline-block mb-4 shadow-xl"><img src="https://api.vietqr.io/image/970422-0397208110-v6XnZcK.jpg?accountName=NGUYEN%20QUOC%20HUY" class="w-44 h-44 object-contain"></div>
+            <div class="text-[11px] space-y-1 mb-6 text-gray-300 font-bold uppercase">
+                <p>STK: 0397208110</p>
+                <p>Tên: NGUYỄN QUỐC HUY</p>
+                <p>Bank: MB BANK / MOMO</p>
+            </div>
+            <a href="https://zalo.me/0397208110" target="_blank" class="block w-full bg-green-600 py-3 rounded-xl font-black uppercase text-[10px]">Liên Hệ Admin Hỗ Trợ</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() { document.getElementById('menu-wrapper').classList.toggle('active'); }
+        function closePopups() { document.querySelectorAll('.popup').forEach(p => p.classList.remove('active')); }
+        function openBankPopup() { closePopups(); document.getElementById('bank-popup').classList.add('active'); }
+    </script>
+</body>
+</html>
